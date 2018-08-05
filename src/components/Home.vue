@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <div>
     <!-- <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
         <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
@@ -13,16 +13,16 @@
         </blockquote>
       </v-layout>
     </v-slide-y-transition> -->
-    <v-content>
-      <section>
-        <v-parallax src="../../Assets/NaturalBridges.jpg" height="600">
+  <section>
+        <v-parallax 
+         :src="require('../../Assets/NaturalBridgesSmaller.jpg')"
+         height="600">
           <v-layout
             column
             align-center
             justify-center
             class="white--text"
           >
-            <img src="assets/vuetify.png" alt="Vuetify.js" height="200">
             <h1 class="white--text mb-2 display-1 text-xs-center">Parallax Template</h1>
             <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div>
             <v-btn
@@ -107,7 +107,8 @@
       </section>
 
       <section>
-        <v-parallax src="assets/section.jpg" height="380">
+        <v-parallax :src="require('../../Assets/NaturalBridgesSmaller.jpg')" 
+        height="380">
           <v-layout column align-center justify-center>
             <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
             <em>Kick-start your application today</em>
@@ -177,13 +178,12 @@
           </v-layout>
         </v-container>
       </section>
-    </v-content>
-  </v-container>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   props: {
     msg: String
   },
@@ -196,7 +196,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style >
+
 h3 {
   margin: 40px 0 0;
 }

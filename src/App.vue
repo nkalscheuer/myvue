@@ -41,7 +41,9 @@
         <v-icon>menu</v-icon>
       </v-btn> -->
     </v-toolbar>
+    
     <v-content>
+      <!-- <v-parallax src="../../Assets/NaturalBridges.jpg" height="600"></v-parallax> -->
       <Home/>
     </v-content>
     <v-navigation-drawer
