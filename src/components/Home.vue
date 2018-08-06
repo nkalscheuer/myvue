@@ -16,7 +16,7 @@
   <section>
         <v-parallax 
          :src="require('../../Assets/NaturalBridgesSmaller.jpg')"
-         height="600">
+         :height=windowSize.y>
           <v-layout
             column
             align-center
@@ -189,14 +189,32 @@ export default {
   },
   data () {
     return {
+      windowSize:{
+        x: 0,
+        y: 0
+      }
     }
+  }, 
+  mounted () {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+  ready: function () {
+    
+  },
+  methods: {
+    onResize () {
+      console.log("WindowSize: ");
+      console.log(this.windowSize);
+      this.windowSize = { x: window.innerWidth, y: window.innerHeight - 64 }
+    },
   }
 
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style >
+<style scoped>
 
 h3 {
   margin: 40px 0 0;

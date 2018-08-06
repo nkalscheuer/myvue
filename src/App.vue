@@ -43,7 +43,6 @@
     </v-toolbar>
     
     <v-content>
-      <!-- <v-parallax src="../../Assets/NaturalBridges.jpg" height="600"></v-parallax> -->
       <Home/>
     </v-content>
     <v-navigation-drawer
@@ -62,9 +61,9 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
+    <!-- <v-footer :fixed="false" app>
       <span>&copy; 2017</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
